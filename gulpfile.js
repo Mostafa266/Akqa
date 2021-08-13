@@ -79,17 +79,6 @@ gulp.task('copyAwesome',function(){
 // })
 
 
-// JS Gulp Task
-// 1 - browserify
-// 2 - transform babelify [env]
-// 3 - bundle
-// 4 - source 
-// 5 - rename .min
-// 6 - buffer
-// 7 - init sourcemap
-// 8 - uglify
-// 9 - write sourcemap 
-// 10- dist
 const jsSRC = 'app.js';
 const jsFolder = 'src/js/';
 const jsFiles = [jsSRC];
@@ -132,7 +121,8 @@ function clean(cb) {
     cb();
 }
 gulp.task('clean', gulp.series(clean));
-gulp.task('build', gulp.series('html', 'css', 'optimizeImage','copyFonts','copyVideos','copyAwesome','js','server'));
+gulp.task('online-build', gulp.series('html', 'css', 'optimizeImage','copyFonts','copyVideos','copyAwesome','js'));
+gulp.task('local-build', gulp.series('html', 'css', 'optimizeImage','copyFonts','copyVideos','copyAwesome','js','server'));
 
 
 gulp.task('watch', function () {

@@ -14,6 +14,7 @@ const port = 3002;
 app.use('/css',express.static(__dirname+'/build/css'))
 app.use('/js',express.static(__dirname+'/build/js'))
 app.use('/imgs',express.static(__dirname+'/build/imgs'))
+app.use('/fonts',express.static(__dirname+'/build/fonts'))
 
 
 app.get("/", function(req, res) {
