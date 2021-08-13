@@ -25,29 +25,33 @@
                 width: 30rem;
                 height: auto;
                 @include breakpoint(large) {
-                   width: 25rem;
+                    width: 25rem;
                 }
                 @include breakpoint(small) {
                     width: 18rem;
                 }
                 @include breakpoint(tablet) {
-                   width: 18rem;
+                    width: 18rem;
                 }
                 @include breakpoint(mobile) {
-                   width: 18rem;
+                    width: 18rem;
                 }
             }
         }
         &--text {
             height: 100%;
+            width: 80%;
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: flex-start;
-           
+
             a {
                 text-decoration: none;
                 cursor: pointer;
+                text-decoration: none;
+                margin: 4rem 0 0;
+                color: $black;
             }
         }
     }
