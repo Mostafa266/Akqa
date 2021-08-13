@@ -22,5 +22,5 @@ app.get("/", function(req, res) {
 
 
 app.listen(port, () => {
-    console.log(`app listening at http://localhost:${port}`)
+    console.log(`site working now on ${port} click to open http://localhost:${port}`)
 })
