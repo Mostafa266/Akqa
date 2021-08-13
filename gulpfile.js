@@ -119,7 +119,7 @@ gulp.task('js',function(done){
 gulp.task('server', function (done) {
     nodemon({
       script: './server/server.js'
-    , ext: 'js html css image'
+    , ext: 'js html css image ttf'
     , env: { 'NODE_ENV': 'development' }
     , done: done
     })
