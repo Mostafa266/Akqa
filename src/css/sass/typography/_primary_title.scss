@@ -9,4 +9,13 @@
     &-blue{
         color: $blue;
     }
+    @include breakpoint(small){
+        font-size: 1.6rem;
+    }
+    @include breakpoint(tablet){
+        font-size: 1.5rem;
+    }
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
   }

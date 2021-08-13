@@ -44,17 +44,7 @@
             justify-content: center;
             flex-direction: column;
             align-items: flex-start;
-            p {
-                font-weight: bold;
-                font-size: 1.8rem;
-                width: 80%;
-                line-height: 130%;
-                letter-spacing: 0.5px;
-                color: $blue;
-                @include breakpoint(mobile) {
-                    font-size: 1rem;
-                }
-            }
+           
             a {
                 text-decoration: none;
                 cursor: pointer;

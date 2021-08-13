@@ -14,15 +14,7 @@
         position: relative;
         z-index: 2;
         &--text {
-            &--title {
-                font-size: 1.8rem;
-                line-height: 120%;
-                letter-spacing: 0.5px;
-                font-weight: bold;
-                &-blue {
-                    color: $blue;
-                }
-            }
+          
             p{
                 line-height: 1.5rem;
                 position: relative;
