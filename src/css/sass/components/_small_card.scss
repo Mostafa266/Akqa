@@ -1,0 +1,41 @@
+.small--card {
+    width: auto;
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--video {
+        background-color: $white;
+        width: auto;
+        height: 100%;
+        flex-basis: 44rem;
+        margin-right: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .play--btn{
+            width: 2rem;
+            height: 2rem;
+            background-color: $red_violet;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                width: 0.9rem;
+                padding-left: 2px;
+            }
+        }
+    }
+    &--text{
+        height: 100%;
+        p{    font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+            margin: 1rem 0;
+            @media screen and (max-width:1024px) {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

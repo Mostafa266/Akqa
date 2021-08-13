@@ -1,0 +1,92 @@
+// eot woff2 woff ttf svg
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+// /|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\------
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+	  @content; 
+	}
+	@-moz-keyframes #{$name} {
+	  @content;
+	}
+	@-ms-keyframes #{$name} {
+	  @content;
+	}
+	@keyframes #{$name} {
+	  @content;
+	} 
+  }
+
+// /|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\------
+
+
+
+//Screens Mixin 
+@mixin breakpoint($point) {
+
+	@if $point==default {
+		@media only screen and (max-width: 1920px) and (max-height:1080px) {
+			@content;
+		}
+	}
+
+	// : Extra large screens, TV
+	@else if $point==xlarge {
+		@media only screen and (min-width:1201px) {
+			@content;
+		}
+	}
+
+	// :  Desktops, large screens
+	@else if $point==large {
+		@media only screen and (min-width:1025px) and (max-width:1200px){
+			@content;
+		}
+	}
+
+	// : Small screens, laptops
+	@else if $point==small {
+		@media only screen and (min-width:769px) and (max-width:1024px){
+		@content;
+		}
+	}
+
+
+	// : iPads, Tablets
+	@else if $point==tablet {
+		@media only screen and (min-width:481px) and (max-width:768px){
+		@content;
+		}
+	}
+
+	// MOBILE
+	@else if $point==mobile {
+		@media only screen and (max-width:480px) {
+			@content;
+		}
+	}
+
+  };

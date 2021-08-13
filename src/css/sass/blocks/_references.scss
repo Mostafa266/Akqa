@@ -1,0 +1,44 @@
+.references {
+    width: 100%;
+    height: 7rem;
+    background-color: $darkgrey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    &.isOpen {
+        height: 15rem;
+        transition: all 0.3s ease-in-out;
+    }
+    &--header {
+        height: 7.5rem;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        &--btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            &--icon {
+                width: 3rem;
+                height: 3rem;
+                background-color: $blue;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 1rem;
+            }
+            span {
+                font-size: 1rem;
+                text-transform: capitalize;
+                color: $blue;
+                font-weight: bold;
+            }
+        }
+    }
+}

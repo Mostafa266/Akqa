@@ -1,0 +1,52 @@
+{
+  "name": "akqa-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mostafa266/Akqa.git"
+  },
+  "keywords": [
+    "Akqa",
+    "html",
+    "test",
+    "akqa",
+    "company"
+  ],
+  "author": "Mostafa Abdelazeem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mostafa266/Akqa/issues"
+  },
+  "homepage": "https://github.com/Mostafa266/Akqa#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^15.0.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-partial": "^1.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-image": "^5.1.0",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "swiper": "^6.8.1"
+  }
+}

@@ -1,0 +1,47 @@
+
+
+// /|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\------
+// ---------------------------Please don't change the order---------------------------
+// /|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\-------/|\------
+
+
+
+
+// Helpers
+@import './sass/helpers/variable';
+@import './sass/helpers/mixins';
+@import './sass/helpers/common';
+
+
+// Vendors
+@import './sass/vendors/bootstap';
+
+// Typography
+@import './sass/typography/primary_title';
+
+
+// Start add components
+@import './sass/components/feature_card';
+@import './sass/components/navbar/navbar';
+@import './sass/components/tool_card';
+@import './sass/components/small_card';
+
+// Btns
+@import './sass/components/btns/menu-btn';
+@import './sass/components/btns/primary-btn';
+
+// Layout
+@import './sass/layout/navbar';
+@import './sass/layout/header';
+@import './sass/layout/footer';
+
+// Blocks
+@import './sass/blocks/our_product';
+@import './sass/blocks/features';
+@import './sass/blocks/video-intro';
+@import './sass/blocks/video-insights';
+@import './sass/blocks/clinical-tools';
+@import './sass/blocks/references';
+
+// Pages
+@import './sass/pages/home';

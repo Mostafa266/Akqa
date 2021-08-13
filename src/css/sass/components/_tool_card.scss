@@ -1,0 +1,51 @@
+.tool--card{
+    width: auto;
+    background-color: $grey;
+    height: 35.188rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &--header{
+        height: 50%;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    &--body{
+        height: 50%;
+        // display: flex;
+        // align-items: flex-start;
+        // justify-content: center;
+        // flex-direction: column;
+        padding: 15%;
+        p{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+        a{
+            color: $red_violet;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        h5{
+            @include breakpoint(small){
+                font-size: 1.5rem;
+            }
+            @include breakpoint(tabet){
+                font-size: 1.3rem;
+            }
+            @include breakpoint(mobile){
+                font-size: 1rem;
+            }
+        }
+    }
+}
