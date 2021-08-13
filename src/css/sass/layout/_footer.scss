@@ -61,7 +61,7 @@
                         width: 0.1rem;
                         left: -1rem;
                         top: 0;
-                        background-color: #d3d3d3;
+                        background-color: #edebeb;
                     }
                 }
                 @include breakpoint(mobile){
@@ -72,7 +72,7 @@
                         width: 0.1rem;
                         left: -1rem;
                         top: 0;
-                        background-color: #d3d3d3;
+                        background-color: #edebeb;
                     }
                 }
                 @include breakpoint(mobile){
@@ -82,7 +82,7 @@
                 }
                 a {
                     text-decoration: none;
-                    color: #d3d3d3;
+                    color: #edebeb;
                     font-size: 1rem;
                     @include breakpoint(tablet){
                         font-size: 0.65rem;
