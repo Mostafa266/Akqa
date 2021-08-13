@@ -1,7 +1,8 @@
 // global components
 import './components/loader';
 // Import Pages 
-import Home from './pages/home'
+import Home from './pages/home';
+import './vendors/userway';
 
 // Check if homepage is Rendered
 let body = document.getElementsByTagName('body')[0];
