@@ -22,7 +22,6 @@
 
 // Start add components
 @import './sass/components/feature_card';
-@import './sass/components/navbar/navbar';
 @import './sass/components/tool_card';
 @import './sass/components/small_card';
 
@@ -31,7 +30,7 @@
 @import './sass/components/btns/primary-btn';
 
 // Layout
-@import './sass/layout/navbar';
+@import './sass/layout/navbar/navbar';
 @import './sass/layout/header';
 @import './sass/layout/footer';
 @import './sass/layout/page-loader';

@@ -5,7 +5,7 @@
     font-family: 'sans',Arial, Helvetica, sans-serif !important;
     z-index: 222;
     &-grey {
-        background-color: $grey;
+        background-color: #f5f5f5;
     }
     &-blue {
         background-color: $blue;
@@ -20,9 +20,10 @@
             height: 100%;
             transition: all 0.4s ease-in-out;
             // width: 20rem;
-            background-color: #e4e4e4;
+            background-color: #ffffff;
             width: 0;
             opacity: 0;
+            box-shadow: 0 0 9px 0 #bcbcbc;
             .nav {
                 &--primary {
                     &--list {
@@ -38,14 +39,40 @@
                         margin: 0;
                         &--item {
                             margin: 1rem 0 0;
-                            padding: 1rem 0 ;
+                            padding: 1rem 0;
                             align-items: flex-start;
                             flex-direction: column;
                             position: relative;
                             overflow: hidden;
+                            cursor: pointer;
                             width: 100%;
+                            transition: all 0.3s ease-in-out;
+                            &:hover {
+                                background: $lightBlue;
+                            }
+
+                            &::before {
+                                position: absolute;
+                                content: '';
+                                left: 0;
+                                top: 0;
+                                transition: all 0.3s ease-in-out;
+                                width: 0;
+                                height: 100%;
+                                background-color: $blue;
+                            }
+                            &:hover::before {
+                                width: 0.3rem;
+                            }
+                            &.active{
+                                background: $lightBlue;
+                                &::before {
+                                    width: 0.3rem;
+                                }
+                            }
+                        
                         }
-                      
+
                     }
                     .nav--sub {
                         position: relative;
@@ -60,16 +87,16 @@
                             align-items: flex-start;
                             padding: 0;
                             margin: 0;
-                            &--item{
+                            &--item {
                                 margin: 0.5rem 0;
                             }
                         }
                     }
                 }
-                &--list--link{
+                &--list--link {
                     margin-left: 1rem;
                 }
-                 &--primary {
+                &--primary {
                     &--list {
                         flex-direction: column;
                         position: absolute;
@@ -83,15 +110,15 @@
                         margin: 0;
                         &--item {
                             margin: 1rem 0 0;
-                           padding: 1rem 0 ;
+                            padding: 1rem 0;
                             align-items: flex-start;
                             flex-direction: column;
                             position: relative;
                             overflow: hidden;
                             width: 100%;
-                           
+
                         }
-                      
+
                     }
                     .nav--child {
                         position: relative;
@@ -110,30 +137,30 @@
                             align-items: flex-start;
                             padding: 0;
                             margin: 0;
-                            &--item{
+                            &--item {
                                 margin: 0.5rem 0;
-                                a{
-                                    &::before{
+                                a {
+                                    &::before {
                                         display: none;
                                     }
                                 }
                             }
                         }
-                        
+
                     }
                 }
-                &--sub{
-                    &--list{
-                        &--item{
+                &--sub {
+                    &--list {
+                        &--item {
                             margin: 1rem 0 0;
-                            padding: 1rem 0 ;
+                            padding: 1rem 0;
                             align-items: flex-start;
                             flex-direction: column;
                             position: relative;
                             overflow: hidden;
                             width: 100%;
-                            a{
-                                &::before{
+                            a {
+                                &::before {
                                     display: none !important;
                                 }
                             }
@@ -142,11 +169,11 @@
                 }
             }
         }
-        &.active{
+        &.active {
             .sidemenu--content {
                 width: 20rem;
                 opacity: 1;
-            } 
+            }
         }
     }
     // Start Top nav content
@@ -168,10 +195,10 @@
         &--logo {
             width: 9rem;
             height: auto;
-            @include breakpoint(tablet){
+            @include breakpoint(tablet) {
                 width: 6rem;
             }
-            @include breakpoint(mobile){
+            @include breakpoint(mobile) {
                 width: 5rem;
             }
             img {
@@ -185,21 +212,21 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            @include breakpoint(tablet){
-                    margin-right: 3rem;
-                    width: 15rem;
+            @include breakpoint(tablet) {
+                margin-right: 3rem;
+                width: 15rem;
             }
-            @include breakpoint(mobile){
-               width: 10rem;
+            @include breakpoint(mobile) {
+                width: 10rem;
             }
             &--icon {
                 position: absolute;
                 right: 0.8rem;
                 top: 25%;
-                @include breakpoint(tablet){
+                @include breakpoint(tablet) {
                     top: 15%;
-                 }
-                @include breakpoint(mobile){
+                }
+                @include breakpoint(mobile) {
                     top: 15%;
                 }
                 svg {
@@ -218,11 +245,11 @@
                 &::placeholder {
                     text-transform: uppercase;
                 }
-                @include breakpoint(tablet){
+                @include breakpoint(tablet) {
                     padding: 0.5rem;
                     font-size: 0.7rem;
-                 }
-                @include breakpoint(mobile){
+                }
+                @include breakpoint(mobile) {
                     padding: 0.5rem;
                     font-size: 0.7rem;
                 }
@@ -248,7 +275,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            &:nth-child(1){
+            &:nth-child(1) {
                 margin-left: 0;
             }
             &.active {
@@ -339,7 +366,7 @@
                 &:hover {
                     .nav--child {
                         display: flex;
-                        animation: shownavIn 0.4s ease-in-out forwards;
+                        animation: shownavIn 0.5s ease-in-out forwards;
                     }
                 }
             }
@@ -352,6 +379,13 @@
                 .nav--list--link {
                     &::before {
                         display: none;
+                    }
+                }
+                a {
+                    &:hover {
+                        &::before {
+                            display: none !important;
+                        }
                     }
                 }
 
