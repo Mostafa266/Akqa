@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://dermaa.netlify.app/">Preview Site</a> |
-  <a href="https://swiperjs.com/swiper-api">My-Portfolio</a> |
+  <a href="https://moabdo.netlify.app">My-Portfolio</a> |
 </p>
 
 
