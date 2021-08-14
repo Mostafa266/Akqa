@@ -17,7 +17,7 @@ developed by Mostafa Abdelazeem
 
 ## Dist / Build
 
-On production use files (JS and CSS) only from `build/` folder, there will be the most stable versions, `src/` folder is only for development purpose.
+On production run HTML file only from `build/` folder, there will be the most stable versions, `src/` folder is only for development purposes.
 
 ### Development Build
 
@@ -46,4 +46,5 @@ The result is available in `server/build/` folder.
 $ npm run online-build
 
 ```
+
 
